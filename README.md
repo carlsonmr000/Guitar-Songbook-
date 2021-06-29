@@ -93,6 +93,8 @@ curl -v -X POST https://api.airtable.com/v0/appcsRpq76oJRyOde/Songs \
 
 - Chords shape diagram
 
+- Comments section
+
  
 
 ## Project Schedule
