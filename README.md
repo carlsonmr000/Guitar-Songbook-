@@ -1,3 +1,4 @@
+<!-- CODENAME: BANANA -->
 ## Project Description
 
 Guitar Songbook will let users store the songs they learn on guitar and add new songs to the app.
