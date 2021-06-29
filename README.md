@@ -1,70 +1,141 @@
-# Getting Started with Create React App
+## Project Description
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Guitar Songbook will let users store the songs they learn on guitar and add new songs to the app.
 
-## Available Scripts
+### Component hierarchy
 
-In the project directory, you can run:
+![component hierarchy](https://i.ibb.co/gWPq04X/hierarchy.png)
 
-### `npm start`
+### Wireframes
+ 
+#### Desktop 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![desktop wireframe](/images/desktop.png)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+#### Desktop Song page 
 
-### `npm test`
+![song page desktop](/images/song-page-desktop.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Mobile Wireframe
 
-### `npm run build`
+![mobile wireframe](/images/guitar-mobile-wireframe-png.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Form Mobile
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![form page mobile](/images/guitar-mobile-wireframe-png.png)
+#### Song Mobile
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![song page mobile](/images/song-page-mobile.png)
 
-### `npm run eject`
+## API and Data Sample
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+ 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```json
+EXAMPLE REQUEST
+curl -v -X POST https://api.airtable.com/v0/appcsRpq76oJRyOde/Songs \
+  -H "Authorization: Bearer keyIBiRwsmEgxNhEH" \
+  -H "Content-Type: application/json" \
+  --data '{
+  "records": [
+    {
+      "fields": {
+        "Date": "6/28/2011",
+        "Song Name/Artist": "Alicia Keys- No One",
+        "Tuning/Capo": "Standard/Capo 4th fret",
+        "Chords": "G D Em C"
+      }
+    },
+    {
+      "fields": {
+        "Date": "02/02/2013",
+        "Song Name/Artist": "Maroon 5-She Will Be Loved",
+        "Tuning/Capo": "Standard/Capo 3rd fret",
+        "Chords": "Am G C F"
+      }
+    }
+  ]
+}'
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## MVP/PostMVP
 
-## Learn More
+#### MVP
+- Build using React
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Use react-router-dom
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- 6 rendered components
 
-### Code Splitting
+- Functional and class components 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Use Axios
 
-### Analyzing the Bundle Size
+- Use AirTable to get data 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Make a get and post request
 
-### Making a Progressive Web App
+- CSS styling
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Flexbox or CSS Grid
 
-### Advanced Configuration
+- Responsive design for 2 screens
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Use semantic variables
 
-### Deployment
+- Indent properly
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
+#### POST-MVP
+- Favorite button
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Chords shape diagram
+
+ 
+
+## Project Schedule
+
+Colons can be used to align columns.
+
+Component  | Estimated Time | Debugging | 
+ --- | --- | --- | 
+ Install axios react-router-dom dependencies| 2 hours
+ Set up homepage| 2 hours
+ Set up form page | 2 hours
+ Set up song page | 2 hours
+ Fetch data with GET Request | 2 hours
+ Axios set Up | 2 hours
+ Make Post request on Form Page | 3 hours
+ Render Song Page | 3 hour
+ Add basic styling on home page | 3 hours
+ Add styling to form page| 3 hours
+ Add styling to song page | 3 hours
+ Desktop Media Query | 3 hours
+ Mobile Media Query | 3 hours
+ Debugging | 3 hours
+
+## Time Table
+
+| Component | Priority | Estimated Time |  
+| ---| --- | ---- |
+| Tuesday | H | 8 hours
+| Wednesday | H | 8 hours 
+| Thursday | H | 8 hours
+| Friday | H | 8 hours
+| Tuesday | H | 8 hours
+|Wednesday | H | 8 hours
+  
+## SWOT Analysis
+
+### Strengths
+One of my strengths is styling with CSS
+
+### Weaknesses
+One of my weaknesses is React and class components
+
+### Opportunities
+This project will give me the opportnity to sharpen my skills in React 
+
+### Threat
+If I get stuck I tend to try and work on the same issue for a long time without asking for help. I'll make sure to ask more questions and avoid spending too much time on a project.
