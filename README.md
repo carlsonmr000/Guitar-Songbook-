@@ -5,64 +5,91 @@ Guitar Songbook will let users store the songs they learn on guitar and add new 
 
 ### Component hierarchy
 
-![component hierarchy](https://i.ibb.co/gWPq04X/hierarchy.png)
+![component hierarchy](/images/updated-component-hierarchy.png)
 
 ### Wireframes
  
 #### Desktop 
 
-![desktop wireframe](/images/desktop.png)
+![desktop wireframe](/images/updated-desktop-wireframe.png)
 
 #### Desktop Song page 
 
-![song page desktop](/images/song-page-desktop.png)
+![song page desktop](/images/updated-song-desktop-page.png)
 
 #### Mobile Wireframe
 
-![mobile wireframe](/images/guitar-mobile-wireframe-png.png)
+![mobile wireframe](/images/updated-mobile-wireframe.png)
 
 #### Form Mobile
 
-![form page mobile](/images/guitar-mobile-wireframe-png.png)
+![form page mobile](/images/form-mobile-wireframe.png)
 #### Song Mobile
 
-![song page mobile](/images/song-page-mobile.png)
+![song page mobile](/images/updated-mobile-song-page.png)
 
 ## API and Data Sample
 
- 
+```
 
-```json
-EXAMPLE REQUEST
-curl -v -X POST https://api.airtable.com/v0/appcsRpq76oJRyOde/Songs \
-  -H "Authorization: Bearer keyIBiRwsmEgxNhEH" \
-  -H "Content-Type: application/json" \
-  --data '{
-  "records": [
-    {
-      "fields": {
-        "Date": "6/28/2011",
-        "Song Name/Artist": "Alicia Keys- No One",
-        "Tuning/Capo": "Standard/Capo 4th fret",
-        "Chords": "G D Em C"
-      }
-    },
-    {
-      "fields": {
-        "Date": "02/02/2013",
-        "Song Name/Artist": "Maroon 5-She Will Be Loved",
-        "Tuning/Capo": "Standard/Capo 3rd fret",
-        "Chords": "Am G C F"
-      }
-    }
-  ]
-}'
+EXAMPLE RESPONSE
+
+{
+    "records": [
+        {
+            "id": "rechczQ49nEh1EjbT",
+            "fields": {
+                "tuning": "Standard",
+                "songName": "No One",
+                "capo": "Capo 4th fret",
+                "chords": "G D Em C",
+                "date": "6/28/2011",
+                "artist": "Alicia Keys"
+            },
+            "createdTime": "2021-06-28T22:42:29.000Z"
+        },
+        {
+            "id": "recRsEiVSCupJayIC",
+            "fields": {
+                "tuning": "Standard",
+                "songName": "She Will Be Loved",
+                "capo": "Capo 3rd fret",
+                "chords": "Am G C F",
+                "date": "02/02/2013",
+                "artist": "Maroon 5"
+            },
+            "createdTime": "2021-06-28T22:42:29.000Z"
+        },
+        {
+            "id": "recZi0g6bG6W0pgXu",
+            "fields": {
+                "tuning": "Standard",
+                "songName": "No Woman No Cry",
+                "capo": "No Capo",
+                "chords": "C G Am F",
+                "date": "03/04/2017",
+                "artist": "Bob Marley"
+            },
+            "createdTime": "2021-06-28T22:42:29.000Z"
+        }
+    ],
+    "offset": "recZi0g6bG6W0pgXu"
+}
 
 ```
 
 ## MVP/PostMVP
 
 #### MVP
+
+- Store song info
+
+- Add songs to app
+
+- View previously added songs
+
+- View song info
+
 - Build using React
 
 - Use react-router-dom
@@ -89,17 +116,18 @@ curl -v -X POST https://api.airtable.com/v0/appcsRpq76oJRyOde/Songs \
 
 
 #### POST-MVP
+
 - Favorite button
 
 - Chords shape diagram
 
 - Comments section
 
- 
+- Transpose button
+
+- Song list
 
 ## Project Schedule
-
-Colons can be used to align columns.
 
 Component  | Estimated Time | Debugging | 
  --- | --- | --- | 
