@@ -90,6 +90,10 @@ EXAMPLE RESPONSE
 
 - View song info
 
+- Update songs
+
+- Delete songs
+
 - Build using React
 
 - Use react-router-dom

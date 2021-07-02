@@ -1,10 +1,9 @@
- 
-
 
 function Footer() {
+
     return (
-      <div className="App">
-      
+      <div className="footer">
+      <p> &copy; Maximiliana Carlson</p>
       </div>
     );
   }
