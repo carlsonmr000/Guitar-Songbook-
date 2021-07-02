@@ -30,18 +30,11 @@ const [song, setSong] = useState([]);
 
     return (
         <div className="App">
-        <h1> Guitar Songbook</h1>
-        {/* <Link id="song" to="/song/:id"></Link> */
-         <div className="guitar-song">
-            {song.map((song) => (
-            <Song key={song._id} song={song} />
-            ))}
-        </div> }
-        <h2>Add new song</h2>
-        <Link id="song-form" to="/form">+</Link>
+        
 
-        <input type="text" placeholder="search a song"></input>
-        <button>Submit</button>
+        
+
+       
       </div>
     );
   }
