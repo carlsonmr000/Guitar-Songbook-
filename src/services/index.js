@@ -1,4 +1,5 @@
         //define url
+        console.log('Process.env', process.env)
 
         export const baseURL = `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE}/song`;
 

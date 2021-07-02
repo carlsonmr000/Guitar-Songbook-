@@ -70,7 +70,7 @@ function App() {
           <Form setToggleFetch={setToggleFetch}/>
         </Route>
 
-        <Route exact path="/song/:id">
+        <Route exact path="/edit/:id">
           <Form song={song} setToggleFetch={setToggleFetch}/>
         </Route>
 

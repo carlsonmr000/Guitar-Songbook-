@@ -18,20 +18,26 @@ function Form(props) {
 
   useEffect(() => {
 
-    if(params.id && props.song.length > 0) {
-        const songToEdit = props.song.find((song) => song.id === params.id);
+    console.log('Params!!!!', params)
 
-         if(songToEdit) { 
-             setDate(songToEdit.song.fields.date);
-             setSongName(songToEdit.song.fields.songName);
-             setArtist(songToEdit.song.fields.artist);
-             setTuning(songToEdit.song.fields.tuning);
-             setCapo(songToEdit.song.fields.capo);
-             setChords(songToEdit.song.fields.chords);
-         }
-    }
+    
+    const songURL = `${baseURL}/${params.id}`;
+    //make a delete request to that url
+    axios.get(songURL, config).then((singleSong) => {
+      console.log('Single Song!!!', singleSong)
+      if(singleSong) { 
+          setDate(singleSong.data.fields.date);
+          setSongName(singleSong.data.fields.songName);
+          setArtist(singleSong.data.fields.artist);
+          setTuning(singleSong.data.fields.tuning);
+          setCapo(singleSong.data.fields.capo);
+          setChords(singleSong.data.fields.chords);
+      }
 
-}, [params.id, props.song])
+    })
+
+
+}, [])
     //collect all the info in object called newSnack
 
     const handleSubmit = async (e) => {
@@ -46,14 +52,16 @@ function Form(props) {
         capo,
         chords
     };
+
+    console.log('New song w edits~!~', newSong)
   
-      if(params.id) {
-          const songURL = `${baseURL}/${params.id}`;
-          await axios.put(songURL, { fields: newSong }, config)
-      } else {
+      // if(params.id) {
+      //     const songURL = `${baseURL}/${params.id}`;
+      //     await axios.put(songURL, { fields: newSong }, config)
+      // } else {
      
-          await axios.post(baseURL, { fields: newSong }, config);
-      }
+      //     await axios.post(baseURL, { fields: newSong }, config);
+      // }
       //make an axios post request to the baseurl with the data and our config
   
   
