@@ -29,9 +29,9 @@ function App() {
           <Form />
         </Route>
 
-        {/* <Route exact path="/song/:id">
+        <Route exact path="/song/:id">
           <Song />
-        </Route> */}
+        </Route>
 
       <footer>
         <Footer />
