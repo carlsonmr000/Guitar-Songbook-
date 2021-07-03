@@ -55,23 +55,31 @@ function Form(props) {
 
     console.log('New song w edits~!~', newSong)
   
-      // if(params.id) {
-      //     const songURL = `${baseURL}/${params.id}`;
-      //     await axios.put(songURL, { fields: newSong }, config)
-      // } else {
+      if(params.id) {
+          const songURL = `${baseURL}/${params.id}`;
+        axios.put(songURL, { fields: newSong }, config).then((data)=>{
+          console.log('WE JUST SAVED!!! update', data)
+          setTimeout(()=> {
+            history.push("/");
+          }, 2000)
+        
+        })
+         
+
+      } else {
      
-      //     await axios.post(baseURL, { fields: newSong }, config);
-      // }
+          await axios.post(baseURL, { fields: newSong }, config);
+          setTimeout(()=> {
+            history.push("/");
+          }, 2000)
+      }
       //make an axios post request to the baseurl with the data and our config
   
   
       //trigger our useEffect
   
    
-      setTimeout(() => {
-          
-          history.push("/");
-      }, 1000);
+
   
   
   

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useHistory, useParams } from "react-router-dom";
 import axios from "axios";
 //import baseURL config from services
 import { baseURL, config } from "../services";
@@ -7,7 +8,11 @@ import { Link } from "react-router-dom";
 
 function Song(props) {
 
+
   const { date, songName, artist, tuning, capo, chords } = props.song.fields;
+
+  const history = useHistory();  
+
 
   const deleteSong = async () => {
     //make specific url
@@ -16,6 +21,9 @@ function Song(props) {
     //make a delete request to that url
     await axios.delete(songURL, config);
     //trigger the useEffect
+    setTimeout(()=> {
+      history.push("/");
+    }, 2000)
     props.setToggleFetch((curr) => !curr);
 }
 

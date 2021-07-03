@@ -66,7 +66,7 @@ function App() {
     <Link id="song-form" to="/form">+</Link>
 
 
-        <Route exact path="/new">
+        <Route exact path="/form">
           <Form setToggleFetch={setToggleFetch}/>
         </Route>
 
