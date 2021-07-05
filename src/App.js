@@ -45,25 +45,21 @@ function App() {
        <Nav />
        {/* <input type="text" placeholder="search a song"></input>
         <button>Submit</button> */}
-       <h1>Guitar Songbook</h1>
+       <h1 id="title">Guitar Songbook</h1>
         <Route exact path="/">
           <Home />
         </Route>
 
         <Route exact path="/">
-        <main>
+        <main id="song-container">
           {song.map((song ) => (
             <Song key={song.id} song={song} setToggleFetch={setToggleFetch} /> 
           ))}
+     <Link id="plus-sign" to="/form">Add new song</Link>
         </main>
       </Route>
 
-        {/* <Route path="/home/:song">
-        <Show birdsList={birdsList} setToggleFetch={setToggleFetch} />
-      </Route> */}
-
-    <h2>Add new song</h2>
-    <Link id="song-form" to="/form">+</Link>
+ 
 
 
         <Route exact path="/form">

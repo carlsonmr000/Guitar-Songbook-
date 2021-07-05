@@ -7,12 +7,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function Song(props) {
-
-
   const { date, songName, artist, tuning, capo, chords } = props.song.fields;
 
-  const history = useHistory();  
-
+  const history = useHistory();
 
   const deleteSong = async () => {
     //make specific url
@@ -21,32 +18,31 @@ function Song(props) {
     //make a delete request to that url
     await axios.delete(songURL, config);
     //trigger the useEffect
-    setTimeout(()=> {
+    setTimeout(() => {
       history.push("/");
-    }, 2000)
+    }, 2000);
     props.setToggleFetch((curr) => !curr);
-}
+  };
 
-    return  (
-
+  return (
+    
       <article>
-        <h3>{date}</h3>
         <h1>{songName}</h1>
-      <h3>{artist}</h3>
-      <h3>{tuning}</h3>
-      <p>{capo}</p> 
-      <p>{chords}</p> 
+        <h2>{artist}</h2>
+        <p>{tuning}</p>
+        <p>{capo}</p>
+        <p>{chords}</p>
+        <p>{date}</p>
 
+        <button onClick={deleteSong}>Delete song</button>
 
-      <button onClick={deleteSong}>Delete song</button>
-
-      <Link to={`/edit/${props.song.id}`}>
-      <button>Edit Song</button>
-      </Link>
-    </article>
-
- )
-
-    }
+        <Link to={`/edit/${props.song.id}`}>
+          <button>Edit Song</button>
+        </Link>
+        
+      </article>
+  
+  );
+}
 
 export default Song;

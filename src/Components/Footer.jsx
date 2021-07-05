@@ -3,7 +3,7 @@ function Footer() {
 
     return (
       <div className="footer">
-      <p> &copy; Maximiliana Carlson</p>
+      <p id="footer"> &copy; Maximiliana Carlson</p>
       </div>
     );
   }
