@@ -6,7 +6,7 @@ function Nav() {
         <nav>
               <Link to="/">Home</Link>
 
-              <Link to="/form">Form</Link>
+              <Link to="/form">Add a new song</Link>
         </nav>
       
     )
