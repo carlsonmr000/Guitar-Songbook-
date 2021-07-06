@@ -1,6 +1,6 @@
 body {
 
-  background-color: palegoldenrod;
+  background-color: #2a9d8f;
   margin: 0;
   padding: 0;
 }
@@ -22,13 +22,14 @@ main {
   position: relative;
   flex-flow: row wrap;
   padding: 0.5em;
-  background-color: royalblue;
+  background-color: white;
+  border-radius: 6px;
+
   justify-content: center;
   align-items: center;
   text-align: center;
+ 
 }
-
-
 
 nav {
   display: flex;
@@ -41,25 +42,60 @@ nav {
   /* margin: 10px 2px; */
 }
 
-#title {
-  font-size: 2rem;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
- 
+a {
+  color: white;
+  text-decoration: none;
+  font-weight: bolder;
 }
 
 article {
   text-align: center;
+  padding: 10px 15px;
+  margin: 0 auto;
+  margin-bottom: 25px;
+  background-color: #2a9d8f;
+  /* border: 3px solid black;  */
+  border-radius: 6px;
+
+}
+
+#title {
+  font-size: 3rem;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  color: white;
+ 
 }
 
 h1 {
   text-align: center;
+  color: white;
+  font-weight: bolder;
+  
  }
 
 h2 {
   text-align: center;
+  color: white;
+  font-weight: bolder;
 }
+
+p {
+ display: flex;
+ align-items: center;
+ text-align: center;
+ justify-content: center;
+ color: white;
+ font-weight: bolder;
+
+}
+
+label {
+  color: white;
+  font-weight: bolder;
+}
+
 
 #song-container {
   flex: 1 0 80px;
@@ -68,34 +104,61 @@ h2 {
   text-align: center;
   justify-content: center;
   align-items: center;
-  background-color: lightblue;
-  border-radius: 6px;
+  /* background-color: #4361ee; */
+  /* border-radius: 6px; */
 }
 
 #plus-sign {
  display: flex;
 text-align: center;
-color: black;
+color: #2a9d8f;
 text-decoration: none;
 padding: 0 auto;
 justify-content: center;
 align-items: center;
-
 }
 
- 
+#plus-sign:hover {
+  color: white;
+}
 
-
- 
-
-p {
+.delete {
   display: flex;
-  align-items: center;
-  text-align: center;
   justify-content: center;
-
+  align-items: center;
+  font-size: .5rem;
+  padding: 5px 10px 5px 10px;
+  background-color: white;
+  color: #2a9d8f;
+  border-radius: 25px;
+  font-family: "Arial", sans serif;
+  font-weight: bold;
+  margin: 25px auto;
 }
 
+.edit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: .5rem;
+  background-color: white;
+  color: #2a9d8f;
+  border-radius: 25px;
+  font-family: "Arial", sans serif;
+  font-weight: bold;
+  padding: 5px 10px 5px 10px;
+  margin: 25px auto;
+}
+
+.delete:hover {
+  background-color:  #2a9d8f;
+  color: white;
+}
+
+.edit:hover {
+  background-color:   #2a9d8f;
+  color: white;
+}
 
 @media screen and (max-width: 425px) {
   main {

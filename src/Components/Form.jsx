@@ -13,6 +13,8 @@ function Form(props) {
   const [capo, setCapo] = useState("");
   const [chords, setChords] = useState("");
   
+
+  
    const history = useHistory();  
   const params = useParams();
 
@@ -37,7 +39,7 @@ function Form(props) {
     })
 
 
-}, [])
+}, [props.toggleFetch])
     //collect all the info in object called newSnack
 
     const handleSubmit = async (e) => {

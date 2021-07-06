@@ -34,7 +34,7 @@ function App() {
         }
         getSong();
 
-      }, []);
+      }, [toggleFetch]);
 
 
   return (

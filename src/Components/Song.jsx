@@ -34,12 +34,12 @@ function Song(props) {
         <p>{chords}</p>
         <p>{date}</p>
 
-        <button onClick={deleteSong}>Delete song</button>
+        <button class="delete" onClick={deleteSong}>Delete song</button>
 
         <Link to={`/edit/${props.song.id}`}>
-          <button>Edit Song</button>
+          <button class="edit">Edit Song</button>
         </Link>
-        
+
       </article>
   
   );
