@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import Nav from "./Components/Nav";
 import Song from "./Components/Song";
 import Home from "./Components/Home";
+import Show from "./Components/Show";
 import Form from "./Components/Form";
 import Footer from "./Components/Footer"; 
 import React from "react";
@@ -59,9 +60,6 @@ function App() {
         </main>
       </Route>
 
- 
-
-
         <Route exact path="/form">
           <Form setToggleFetch={setToggleFetch}/>
         </Route>
@@ -70,7 +68,21 @@ function App() {
           <Form song={song} setToggleFetch={setToggleFetch}/>
         </Route>
 
+       <Route exact path="/">
+        <main>
+          {song.map((song) => (
+            <Link to={`/home/${song.songName}`}>
+             </Link>
+          ))}
+        </main>
+      </Route>
 
+
+        <Route path="/show/:id">
+        <Show  key={song.id} song={song} setToggleFetch={setToggleFetch} />
+        <Link to={`/show/${song.songName}`}>
+             </Link>
+      </Route>
        
 
       <Route>

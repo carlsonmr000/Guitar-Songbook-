@@ -40,6 +40,10 @@ function Song(props) {
           <button class="edit">Edit Song</button>
         </Link>
 
+        <Link to={`/show/${props.song.id}`}>
+          <button class="show">Show more</button>
+        </Link>
+
       </article>
   
   );

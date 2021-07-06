@@ -12,8 +12,7 @@ const [song, setSong] = useState([]);
  
 
       useEffect(() => {
-        console.log('HOME USE EFFECTHAPPENING!!')
-        //window.location.reload()
+       //window.location.reload()
 
         const getSong = async () => {
 
