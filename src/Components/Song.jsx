@@ -20,7 +20,7 @@ function Song(props) {
     //trigger the useEffect
     setTimeout(() => {
       history.push("/");
-    }, 2000);
+    });
     props.setToggleFetch((curr) => !curr);
   };
 

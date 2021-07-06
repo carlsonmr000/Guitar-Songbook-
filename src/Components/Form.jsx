@@ -48,22 +48,21 @@ function Form(props) {
  
     if (params.id) {
       const songURL = `${baseURL}/${params.id}`;
-      axios.put(songURL, { fields: newSong }, config).then((data) => {
-        console.log("WE JUST SAVED!!! update", data);
-        setTimeout(() => {
-          history.push("/");
-        }, 2000);
-      });
+      await axios.put(songURL, { fields: newSong }, config) 
+      
     } else {
       await axios.post(baseURL, { fields: newSong }, config);
-      setTimeout(() => {
-        history.push("/");
-      }, 2000);
     }
+    
+    //trigger our useEffect
+    props.setToggleFetch((curr) => !curr );
 
+
+    setTimeout(() => {
+      history.push("/");
+    }, 2000);
     //make an axios post request to the baseurl with the data and our config
 
-    //trigger our useEffect
   };
   return (
     <form onSubmit={handleSubmit}>
