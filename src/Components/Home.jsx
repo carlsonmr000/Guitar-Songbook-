@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { baseURL, config } from "../services";
-import Song from "./Song";
-import { Link } from "react-router-dom";
-
+  
 
 
 function Home() {
@@ -12,8 +10,7 @@ const [song, setSong] = useState([]);
  
 
       useEffect(() => {
-       //window.location.reload()
-
+ 
         const getSong = async () => {
 
         
