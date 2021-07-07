@@ -8,6 +8,12 @@ import { Link } from "react-router-dom";
 
 function Song(props) {
   const { date, songName, artist, tuning, capo, chords } = props.song.fields;
+  const [showMore, setShowMore] = useState(false);
+
+  function toggle() {
+    (showMore === false) ? setShowMore(true) : setShowMore(false);
+
+}
 
   const history = useHistory();
 
@@ -27,12 +33,25 @@ function Song(props) {
   return (
     
       <article>
+
         <h1>{songName}</h1>
+        
         <h2>{artist}</h2>
+
+        {showMore === true ? (
+          <div>
+
         <p>{tuning}</p>
         <p>{capo}</p>
         <p>{chords}</p>
         <p>{date}</p>
+
+          </div>
+ 
+
+        ): ""
+
+      }
 
         <button class="delete" onClick={deleteSong}>Delete song</button>
 

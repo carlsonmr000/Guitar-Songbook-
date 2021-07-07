@@ -18,11 +18,11 @@ function Show(props) {
  return (
 
     <section id="section">
-      <h1 id="song-name">{song.fields.songName}</h1>
-      <h3 id="artist">{song.fields.artist}</h3>
-     <p>{song.fields.tuning}</p>
-     <p>({song.fields.capo})</p>
-     <p>({song.fields.chords})</p>
+      <h1 id="show-name">{song.fields.songName}</h1>
+      <h3 id="show-artist">{song.fields.artist}</h3>
+     <p id="show-tuning">{song.fields.tuning}</p>
+     <p id="show-capo">{song.fields.capo}</p>
+     <p id="show-chords">{song.fields.chords}</p>
      </section>
 
         )

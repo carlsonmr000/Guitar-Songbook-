@@ -114,7 +114,7 @@ function Form(props) {
         onChange={(e) => setChords(e.target.value)}
       />
 
-      <button type="submit">Submit</button>
+      <button type="submit" class="submit">Submit</button>
     </form>
   );
 }

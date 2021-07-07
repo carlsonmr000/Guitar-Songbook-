@@ -15,8 +15,7 @@ import "./App.css";
 function App() {
   const [song, setSong] = useState([]);
   const [toggleFetch, setToggleFetch] = useState(true);
-  const [searchTerm, setSearchTerm] = useState("");
-
+ 
   useEffect(() => {
     const getSong = async () => {
       const resp = await axios.get(baseURL, config);
@@ -30,7 +29,8 @@ function App() {
     <Router>
       <div className="App">
         <Nav />
-        <h1 id="title">Guitar Songbook</h1>
+        <Link to="/"><h1 id="title">Guitar Songbook</h1></Link>
+       
         <Route exact path="/">
           <Home />
         </Route>
