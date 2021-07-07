@@ -18,6 +18,10 @@ function Form(props) {
   useEffect(() => {
     const songURL = `${baseURL}/${params.id}`;
     //make a delete request to that url
+    if(!params.id) {
+      return
+    }
+
     axios.get(songURL, config).then((singleSong) => {
        if (singleSong) {
         setDate(singleSong.data.fields.date);
@@ -28,7 +32,7 @@ function Form(props) {
         setChords(singleSong.data.fields.chords);
       }
     });
-  }, [props.toggleFetch]);
+  }, [props.song]);
   //collect all the info in object called newSnack
 
   const handleSubmit = async (e) => {
@@ -113,7 +117,7 @@ function Form(props) {
         onChange={(e) => setChords(e.target.value)}
       />
 
-      <button type="submit" class="submit">Submit</button>
+      <button type="submit" className="submit">Submit</button>
     </form>
   );
 }

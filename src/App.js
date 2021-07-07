@@ -57,7 +57,7 @@ function App() {
         <Route exact path="/">
           <main>
             {song.map((song) => (
-              <Link to={`/home/${song.songName}`}></Link>
+              <Link key={song.id} to={`/home/${song.songName}`}></Link>
             ))}
           </main>
         </Route>
