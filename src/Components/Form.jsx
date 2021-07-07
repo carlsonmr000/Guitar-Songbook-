@@ -19,8 +19,7 @@ function Form(props) {
     const songURL = `${baseURL}/${params.id}`;
     //make a delete request to that url
     axios.get(songURL, config).then((singleSong) => {
-      console.log("Single Song!!!", singleSong);
-      if (singleSong) {
+       if (singleSong) {
         setDate(singleSong.data.fields.date);
         setSongName(singleSong.data.fields.songName);
         setArtist(singleSong.data.fields.artist);

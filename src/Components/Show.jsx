@@ -13,7 +13,6 @@ function Show(props) {
   }
 
 
-  console.log(song)
 
  return (
 
